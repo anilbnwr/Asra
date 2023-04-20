@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/review_cart_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cart_margin_start"
+        android:layout_centerVertical="true">
+
+
+        <TextView
+            android:id="@+id/review_cart_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/ph_cart_item_name"
+            android:textColor="@color/color_cart_title"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/review_cart_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/review_cart_item_name"
+            android:text="Qty: 1| Price: $120 | Fee: $20"
+            android:textColor="@color/color_cart_description"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/review_cart_item_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/review_cart_item_price"
+            android:text="Total: $150"
+            android:textColor="@color/color_cart_price"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/review_cart_item_stock_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_x_large"
+        android:text="@string/label_cart_out_of_stock"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_below="@+id/review_cart_container"
+        android:background="@drawable/item_divider"/>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackgroundDarkGray">
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_medium"
+        android:padding="5dp"
+        tools:text="Event Name"/>
+
+    <TextView
+        android:id="@+id/eventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/eventName"
+        android:layout_marginStart="@dimen/margin_large"
+        android:padding="5dp"
+        tools:text="Date: 01 Mar 2021"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_small" />
+</RelativeLayout>

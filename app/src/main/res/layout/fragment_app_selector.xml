@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/app_moto"
+            android:layout_width="@dimen/app_selector_size"
+            android:layout_height="@dimen/app_selector_size"
+            android:src="@drawable/moto_logo"
+            app:layout_constraintBottom_toTopOf="@+id/app_ev"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/app_ev"
+            android:layout_width="@dimen/app_selector_size"
+            android:layout_height="@dimen/app_selector_size"
+            android:src="@drawable/ev_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_moto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

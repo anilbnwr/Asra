@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:background="@color/colorBackgroundGray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/et_product_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:context=".component.dashboard.DashboardActivity"
+
+        tools:listitem="@layout/list_item_et_card">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <FrameLayout
+        android:id="@+id/emptyViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightGray"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/emptyMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/dashboard_margin_start"
+            android:textSize="@dimen/font_large" />
+    </FrameLayout>
+
+</RelativeLayout>
+</layout>

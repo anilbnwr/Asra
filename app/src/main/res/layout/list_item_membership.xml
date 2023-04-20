@@ -1,0 +1,108 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/margin_small"
+    android:elevation="@dimen/card_view_elevation">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/membership_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/margin_normal"
+       >
+
+        <com.asra.mobileapp.common.Divider
+            android:id="@+id/membershipInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/membershipTenure"
+            />
+
+        <TextView
+            android:id="@+id/membershipName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textSize="@dimen/font_large"
+            tools:text="Guest Guest Guest Guest Guest Guest"/>
+        <TextView
+            android:id="@+id/membershipPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/membershipName"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:textSize="@dimen/font_huge"
+            android:textStyle="bold"
+            android:text="Price: $0.0"/>
+        <TextView
+            android:id="@+id/membershipTenure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/membershipPrice"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_large"
+            android:textSize="@dimen/font_large"
+            android:text="Season 2020"/>
+        <TextView
+            style="@style/primaryButton"
+            android:id="@+id/btn_upgrade"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:textSize="@dimen/font_medium"
+            android:layout_marginStart="@dimen/margin_x_large"
+            android:layout_marginEnd="@dimen/margin_x_large"
+            android:layout_marginBottom="@dimen/margin_narrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="40dp"
+            android:textAllCaps="true"
+            android:padding="@dimen/padding_narrow"
+            app:layout_constraintTop_toBottomOf="@+id/membershipInfo"
+            android:text="@string/btn_purchase" />
+        <TextView
+            style="@style/borderedButton"
+            android:id="@+id/btn_view_more"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_x_small"
+            android:layout_marginStart="@dimen/margin_x_large"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/margin_x_large"
+            android:textSize="@dimen/font_medium"
+            android:padding="@dimen/padding_narrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_upgrade"
+            android:text="@string/btn_view_more" />
+
+        <View
+            android:id="@+id/spaceFiller"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_more"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

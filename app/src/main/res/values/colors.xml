@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorGreen</color>
+    <color name="colorPrimaryDark">#003DA6</color>
+    <color name="colorAccent">#FF36503D</color>
+    <color name="colorPrimaryTransparent">#003DA6</color>
+    <color name="colorHintWhite">#f7efef</color>
+    <color name="ef_grey">#F9FAF7</color>
+
+    <color name="colorRedTransparent">#DDff0000</color>
+
+    <color name="colorNavIcon">#003DA6</color>
+    <color name="colorNavText">#003DA6</color>
+    <color name="colorTabBackground">#333333</color>
+
+    <color name="colorGreen">#003DA6</color>
+    <color name="colorMenuDivider">#EAEAEA</color>
+    <color name="colorDivider">#EAEAEA</color>
+    <color name="colorCartDivider">#FF928B8B</color>
+    <color name="colorBackgroundGray">#F5F5F5</color>
+    <color name="colorBackgroundDarkGray">#847f7f</color>
+    <color name="colorEventHostBgGray">#f4f4f4</color>
+    <color name="colorLightGray">#F9FAF7</color>
+
+    <color name="appBackground">#F9FAF7</color>
+    <color name="settingsTitle">#3f423b</color>
+    <color name="settingsSubTitle">#555555</color>
+    <color name="darkGray">#555555</color>
+
+
+
+    <color name="colorBackgroundWhite">#FFFFFF</color>
+
+    <color name="colorTextBlack">#646E59</color>
+    <color name="colorTextRed">#935</color>
+    <color name="colorTextWhite">#fff</color>
+    <color name="colorTextGrey">#847f7f</color>
+    <color name="colorAppUpgradeBackground">#847f7f</color>
+
+    <color name="colorBackgroundGrayTransparent">#AAF5F5F5</color>
+    <color name="colorOutOfStockGrey">#aae3e3e3</color>
+
+    <color name="expandable_arrow">@color/colorPrimary</color>
+
+    <color name="color_bg_total">#c5e0da</color>
+    <color name="color_bg_price">#d7eae4</color>
+    <color name="color_checkout_indicator_line_active">#1DAFEC</color>
+    <color name="color_checkout_indicator_line_inactive">#E6E6E6</color>
+    <color name="colorEventHostText">#7c7c7c</color>
+
+    <color name="color_badge_background">@android:color/holo_red_dark</color>
+
+    <color name="color_cart_title">#555555</color>
+    <color name="color_cart_out_of_stock">#ffcc0000</color>
+    <color name="color_cart_description">#8C8C8C</color>
+    <color name="color_cart_price">#003DA6</color>
+
+
+    <color name="color_btn_grey_normal">#8F8F8F</color>
+    <color name="color_btn_grey_pressed">#FF928B8B</color>
+
+
+    <color name="color_btn_red_normal">#D22E2D</color>
+    <color name="color_btn_red_pressed">#FFF12020</color>
+
+
+    <color name="color_bg_item_price">#003DA6</color>
+    <color name="color_bg_item_total_price">#003DA6</color>
+
+    <color name="pink">#F5DDE0</color>
+    <color name="theme_color">#003DA6</color>
+
+</resources>

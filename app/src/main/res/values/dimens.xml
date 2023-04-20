@@ -1,0 +1,82 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="divider_size">0.3dp</dimen>
+    <dimen name="divider_size_thick">0.5dp</dimen>
+    <dimen name="divider_size_2x">3dp</dimen>
+    <dimen name="margin_top_regular">@dimen/margin_normal</dimen>
+    <dimen name="width_checkout_step_text">80dp</dimen>
+    <dimen name="margin_end_line_checkout_step">75dp</dimen>
+    <dimen name="grid_item_space">3dp</dimen>
+    <dimen name="settingsItemHeight">60dp</dimen>
+    <dimen name="tabIndicatorHeight">5dp</dimen>
+    <dimen name="checkoutIndicatorLineStroke">3dp</dimen>
+
+
+
+    <dimen name="shop_banner_height">250dp</dimen>
+
+
+
+    <!-- CART -->
+    <dimen name="cart_delete_margin_end">1dp</dimen>
+    <dimen name="cart_margin_end">20dp</dimen>
+    <dimen name="cart_margin_start">10dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="font_event_card_title">15sp</dimen>
+    <dimen name="font_event_card_description">12sp</dimen>
+
+    <dimen name="dashboard_margin_start">@dimen/margin_normal</dimen>
+    <dimen name="dashboard_margin_end">@dimen/margin_normal</dimen>
+
+    <dimen name="event_card_icon_size">25dp</dimen>
+    <dimen name="badge_count_text_size">12sp</dimen>
+
+    <dimen name="event_list_item_image_height">90dp</dimen>
+    <dimen name="shop_item_height">120dp</dimen>
+    <dimen name="shop_card_item_height">250dp</dimen>
+    <dimen name="shop_card_item_image_height">120dp</dimen>
+    <dimen name="shop_card_details_image_height">180dp</dimen>
+    <dimen name="shop_gift_details_image_height">250dp</dimen>
+
+
+    <dimen name="et_list_image_height">120dp</dimen>
+    <dimen name="et_details_image_height">200dp</dimen>
+    <dimen name="et_list_image_width">150dp</dimen>
+    <dimen name="event_moto_icon_size">30dp</dimen>
+    <dimen name="event_moto_icon_margin">-10dp</dimen>
+
+    <dimen name="et_profile_view_height">230dp</dimen>
+    <dimen name="et_profile_image_height">200dp</dimen>
+    <dimen name="et_image_height">110dp</dimen>
+    <dimen name="et_image_width">160dp</dimen>
+
+
+    <dimen name="checkout_view_divider_margin_top">30dp</dimen>
+    <dimen name="event_item_image_width">130dp</dimen>
+
+
+    <dimen name="progressbar_size">50dp</dimen>
+    <dimen name="ic_btn_size">30dp</dimen>
+
+    <dimen name="ic_btn_size_medium">50dp</dimen>
+
+    <dimen name="icon_size">15dp</dimen>
+
+    <dimen name="bottom_button_height">70dp</dimen>
+
+    <dimen name="et_page_margin_start">@dimen/margin_small</dimen>
+    <dimen name="et_page_margin_end">@dimen/margin_small</dimen>
+    <dimen name="et_page_margin_top">@dimen/margin_small</dimen>
+    <dimen name="et_page_margin_bottom">@dimen/margin_small</dimen>
+
+
+    <dimen name="padding_list_item">@dimen/margin_small</dimen>
+    <dimen name="signature_pad_height">150dp</dimen>
+
+    <dimen name="app_selector_size">150dp</dimen>
+
+    <dimen name="cancel_banner_size">50dp</dimen>
+    <dimen name="tab_height">50dp</dimen>
+
+
+</resources>

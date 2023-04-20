@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/drawer_menu_top"
+        android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/menu_nav_home"
+            android:icon="@drawable/homenew"
+            android:title="@string/menu_navigation_home" />
+
+        <item
+            android:id="@+id/menu_nav_upcoming_events"
+            android:icon="@drawable/upcoming_events_new"
+            android:title="@string/menu_navigation_upcoming_events" />
+
+        <item
+            android:id="@+id/menu_nav_past_events"
+            android:icon="@drawable/past_events_new"
+            android:title="@string/menu_navigation_past_events" />
+
+        <item
+            android:id="@+id/menu_nav_credit_history"
+            android:icon="@drawable/creditnew"
+            android:title="@string/menu_navigation_credit_history" />
+
+        <item
+            android:id="@+id/menu_nav_membership"
+            android:icon="@drawable/membershipnew"
+            android:title="@string/menu_navigation_membership" />
+
+        <item
+            android:id="@+id/menu_nav_e_waiver"
+            android:icon="@drawable/e_waiver_moto"
+            android:title="@string/menu_navigation_e_waiver" />
+
+        <item
+            android:id="@+id/menu_nav_transfer_credit"
+            android:icon="@drawable/creditnew"
+            android:title="@string/transfer_credit" />
+
+    </group>
+    <group
+        android:id="@+id/drawer_menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/menu_nav_edit_profile"
+            android:icon="@drawable/profilenew"
+            android:title="@string/menu_navigation_profile" />
+
+        <item
+            android:id="@+id/menu_nav_change_password"
+            android:icon="@drawable/passwordnew"
+            android:title="@string/menu_navigation_change_password" />
+    </group>
+    <group
+        android:id="@+id/drawer_menu_app_particulars"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_nav_settings"
+            android:icon="@drawable/settingsnew"
+            android:title="@string/menu_navigation_settings" />
+
+        <item
+            android:id="@+id/menu_nav_help"
+            android:icon="@drawable/aboutnew"
+            android:title="@string/menu_navigation_help"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/menu_nav_privacy"
+            android:icon="@drawable/aboutnew"
+            android:title="@string/menu_navigation_privacy"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/menu_nav_about_us"
+            android:icon="@drawable/aboutnew"
+            android:title="@string/menu_navigation_about_us" />
+
+        <item
+            android:id="@+id/menu_nav_switch_module"
+            android:icon="@drawable/ic_module_switch_blue"
+            android:title="@string/menu_navigation_switch_module" />
+
+        <!--        <item android:id="@+id/menu_nav_switch_app"-->
+        <!--            android:title="@string/menu_navigation_switch_app"-->
+        <!--            android:icon="@drawable/ic_module_switch_green" />-->
+
+        <item
+            android:id="@+id/menu_nav_delete_account"
+            android:icon="@drawable/deleteacc"
+            android:title="@string/menu_navigation_delete_acc" />
+
+        <item
+            android:id="@+id/menu_nav_logout"
+            android:icon="@drawable/logoutnew"
+            android:title="@string/menu_navigation_logout" />
+    </group>
+</menu>

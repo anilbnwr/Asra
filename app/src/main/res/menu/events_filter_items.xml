@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="By Event Month"
+        android:id="@+id/menu_event_month" />
+
+    <item android:title="By Event Type"
+        android:id="@+id/menu_event_filter_type" />
+
+    <item android:title="Clear"
+        android:id="@+id/menu_event_clear" />
+
+</menu>

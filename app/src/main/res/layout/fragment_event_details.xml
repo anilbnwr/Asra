@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/stylePageMarginWithTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:id="@+id/eventDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/event_detail_bottomLayout">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:id="@+id/scrollContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/event_detail_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:contentDescription="@string/cd_cell_image"
+                        android:scaleType="fitXY" />
+                    <ImageView
+                        android:id="@+id/event_cancel_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/banner_cancelled"
+                        android:visibility="gone"
+                        android:contentDescription="@string/cd_cell_image" />
+
+                    <FrameLayout
+                        android:id="@+id/event_imageProgressContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorBackgroundGrayTransparent"
+                        android:visibility="visible">
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:minWidth="50dp"
+                            android:minHeight="50dp"
+
+                            />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/event_details_event_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/event_detail_image"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="@string/ph_date"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/event_detail_price_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/event_details_event_date"
+                        android:background="@color/color_bg_price">
+
+                        <com.asra.mobileapp.common.Divider
+                            android:id="@+id/priceSeparator"
+                            android:layout_width="@dimen/divider_size"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true">
+
+                        </com.asra.mobileapp.common.Divider>
+
+                        <RelativeLayout
+                            android:id="@+id/roleBasedPriceLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/priceSeparator"
+                            android:background="@color/color_bg_item_price">
+
+                            <com.asra.mobileapp.common.Divider
+                                android:id="@+id/viewSplitter"
+                                android:layout_width="@dimen/divider_size"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true" />
+
+                            <TextView
+                                android:id="@+id/event_details_role"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_narrow"
+                                android:layout_toStartOf="@+id/viewSplitter"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/ph_role"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/font_medium" />
+
+                            <TextView
+                                android:id="@+id/event_details_role_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/viewSplitter"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textSize="@dimen/font_medium"
+                                android:textColor="@color/colorTextWhite"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/totalPriceLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/priceSeparator"
+                            android:background="@color/color_bg_item_total_price">
+
+                            <TextView
+                                android:id="@+id/event_details_total_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dashboard_margin_start"
+                                android:layout_marginEnd="@dimen/margin_narrow"
+                                android:gravity="center"
+                                android:textColor="@color/colorTextWhite"
+                                android:padding="5dp"
+                                android:text="@string/total_price"
+                                android:textSize="@dimen/font_medium" />
+
+                            <TextView
+                                android:id="@+id/event_details_total_price_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dashboard_margin_end"
+                                android:layout_toEndOf="@+id/event_details_total_price"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/ph_price"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/font_medium"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/trainingListCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/event_detail_price_layout"
+                        android:layout_marginTop="@dimen/dashboard_margin_start"
+                        android:background="@color/colorBackgroundWhite"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/event_trainingList_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="@string/events_label_select_training"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/font_large"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/trainingListContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_top_regular"
+                            android:background="@color/colorBackgroundWhite"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/event_detail_rental_card_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/trainingListCardContainer"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorBackgroundWhite"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/event_rentalList_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="@string/events_label_select_rentals"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/font_large"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/event_rental_stock_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorOutOfStockGrey"
+                            android:gravity="start"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/label_cart_out_of_stock"
+                            android:visibility="gone"
+                            android:textColor="@color/color_cart_out_of_stock"
+                            android:textSize="@dimen/font_medium" />
+                        <LinearLayout
+                            android:id="@+id/event_detail_rental_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorBackgroundWhite"
+                            android:orientation="vertical"/>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/event_detail_product_info_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/event_detail_rental_card_container"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+
+                            android:id="@+id/event_detail_product_info_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/events_label_product_info"
+                            android:textSize="@dimen/font_large"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/event_detail_product_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/event_detail_product_info_title"
+                            android:textSize="@dimen/font_medium" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/event_detail_bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/event_external_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:textColor="@color/color_cart_description"
+                android:textSize="@dimen/font_medium"
+                android:layout_margin="@dimen/margin_normal"
+                android:visibility="visible"
+                tools:visibility="visible"
+                tools:text="When you click on add to cart, it'll redirect you to MDT's website." />
+            <TextView
+                android:id="@+id/event_details_btn_add_to_cart"
+                style="@style/primaryButton"
+                android:layout_below="@+id/event_external_host"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tracks_label_add_to_cart"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/event_details_btn_soldout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@+id/event_external_host"
+                android:enabled="false"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/tracks_label_sold_out"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tracks_cd_banner">Tracks Banner</string>
+    <string name="tracks_spinner_prompt">Filter By</string>
+
+    <string name="tracks_label_view">View</string>
+    <string name="btn_purchase">Purchase</string>
+    <string name="btn_view_more">View More</string>
+    <string name="tracks_label_add_to_cart">Add to Cart</string>
+    <string name="tracks_label_sold_out">Sold Out</string>
+    <string name="events_label_training_available">Training Available</string>
+    <string name="events_label_select_training">Select Training</string>
+    <string name="events_label_select_rentals">Select Rentals</string>
+    <string name="events_label_product_info">About This Event:</string>
+    <string-array name="tracks_filter_array">
+
+        <item>Filter By</item>
+        <item>Drop Down List 1</item>
+        <item>Drop Down List 2</item>
+        <item>Drop Down List 3</item>
+        <item>Drop Down List 5</item>
+        <item>Drop Down List 6</item>
+        <item>Drop Down List 7</item>
+        <item>Drop Down List 8</item>
+    </string-array>
+
+    <string name="ph_tracks_item_title">Royal Flush NCBIKE Fall</string>
+    <string name="ph_tracks_item_host">Hosted By EVOLVE GT</string>
+    <string name="ph_tracks_item_price">Starting from </string>
+
+    <string name="label_apply">Apply</string>
+
+    <string name="events_see_rolebased_price">See Role Base Price</string>
+    <string name="rental_select">Add to Cart</string>
+    <string name="total_price">Total:</string>
+
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackgroundWhite"
+    android:elevation="@dimen/card_elevation"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:visibility="visible"
+            android:layout_alignParentStart="true">
+
+            <com.asra.mobileapp.common.Divider
+                android:id="@+id/horizontal_divider"
+                android:layout_width="@dimen/divider_size"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+            </com.asra.mobileapp.common.Divider>
+
+            <RelativeLayout
+                android:id="@+id/event_item_progressbarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_list_item_image_height"
+                android:layout_toEndOf="@+id/horizontal_divider"
+                android:layout_centerVertical="true">
+                <ProgressBar
+                    android:id="@+id/event_item_progressbar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:minHeight="50dp"
+                    android:minWidth="50dp"
+                    android:layout_gravity="center"
+
+                    />
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:id="@+id/tracks_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_list_item_image_height"
+
+                android:scaleType="fitXY"
+                android:layout_marginStart="3dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tracks_lucky"
+                android:layout_toEndOf="@+id/horizontal_divider"/>
+            <TextView
+                android:id="@+id/tracks_item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:text="Date: 30 Dec 2019"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/horizontal_divider"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/horizontal_divider">
+                <TextView
+                    android:id="@+id/tracks_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/ph_tracks_item_title"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_medium"
+                    android:gravity="center"
+                    android:background="@color/colorBackgroundGray"/>
+                <TextView
+                    android:id="@+id/tracks_item_host_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ph_tracks_item_host"
+                    android:padding="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_medium"
+                    android:gravity="center"
+                    android:background="@color/colorBackgroundGray"
+                    android:layout_below="@id/tracks_item_title"/>
+                <TextView
+                    android:id="@+id/tracks_item_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ph_tracks_item_price"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_medium"
+                    android:background="@color/colorBackgroundGray"
+                    android:gravity="center"
+                    android:layout_below="@id/tracks_item_host_name"/>
+                <TextView
+                    android:id="@+id/tracks_item_price_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$150"
+                    android:paddingBottom="10dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold"
+                    android:background="@color/colorBackgroundGray"
+                    android:gravity="center"
+                    android:layout_below="@id/tracks_item_price"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/topLayout">
+            <com.asra.mobileapp.common.Divider
+                android:id="@+id/horizontal_divider2"
+                android:layout_width="@dimen/divider_size"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible">
+            </com.asra.mobileapp.common.Divider>
+            <TextView
+                android:id="@+id/tracks_item_btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toStartOf="@+id/horizontal_divider2"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:text="@string/tracks_label_view"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_medium"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tracks_item_btn_addCart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@+id/horizontal_divider2"
+
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_medium"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/black"
+                android:layout_marginBottom="10dp"
+                android:text="@string/tracks_label_add_to_cart"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

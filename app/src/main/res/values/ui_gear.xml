@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="shop_cd_background">Background Image</string>
+    <string name="shop_label_archie_cards">Archie Cards</string>
+    <string name="shop_label_gift">Gifts</string>
+    <string name="shop_label_gear">Gear</string>
+    <string name="shop_label_events">Events</string>
+    <string name="shop_label_rentals">Rentals</string>
+
+
+
+
+    <string name="cd_card_image">Image for Cards</string>
+
+    <string name="shop_hint_receiver_name">Name of Receiver</string>
+    <string name="shop_hint_receiver_email">Email of Receiver</string>
+
+
+    <string name="msg_reading_category">Loading &#8230;</string>
+
+
+</resources>

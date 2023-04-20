@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/btnSave"
+            style="@style/primaryButton"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:text="@string/label_btn_next" />
+
+        <ScrollView
+            android:id="@+id/scrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnSave">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/margin_large" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/margin_normal" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_firstName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_xx_large"
+                    android:hint="@string/hint_first_name"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_lastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/hint_last_name"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@+id/til_firstName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/hint_email"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@+id/til_lastName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_dob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/hint_date_of_birth"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/til_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/drawable_ic_calendar"
+                        android:drawableTint="@color/colorPrimary"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/hintGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:padding="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/hint_gender"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/til_dob" />
+
+                <RadioGroup
+                    android:id="@+id/gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/hintGender">
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/genderMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:checked="true"
+                        android:text="@string/txt_gender_male" />
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/genderFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:text="@string/txt_gender_female" />
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/genderUnspecified"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:text="@string/txt_gender_unspecified" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/hint_phone"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/gender">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

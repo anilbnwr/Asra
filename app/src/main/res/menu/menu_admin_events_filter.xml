@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="By Month"
+        android:id="@+id/menu_events_month" />
+
+    <item android:title="By Event Type"
+        android:id="@+id/menu_events_type" />
+
+    <item android:title="By Training Type"
+        android:id="@+id/menu_events_training_type" />
+    <item android:title="Clear"
+        android:id="@+id/menu_filter_clear" />
+</menu>

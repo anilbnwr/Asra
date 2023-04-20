@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/colorBackgroundGrayTransparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/passportImage"
+                    app:layout_constraintEnd_toEndOf="@+id/passportImage"
+                    app:layout_constraintStart_toStartOf="@+id/passportImage"
+                    app:layout_constraintTop_toTopOf="@+id/passportImage" />
+
+                <TextView
+                    android:id="@+id/trackName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:padding="@dimen/padding_narrow"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_huge"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Track Name" />
+
+                <TextView
+                    android:id="@+id/trackDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:padding="@dimen/padding_narrow"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_semi_huge"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trackName"
+                    tools:text="Event Date: 09 Feb 2022" />
+
+                <ImageView
+                    android:id="@+id/passportImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/cd_passport_image"
+                    android:scaleType="fitXY"
+                    app:layout_constraintDimensionRatio="4:3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trackDate"
+                    tools:src="@drawable/banner_tab_gear" />
+
+                <TextView
+                    android:id="@+id/signedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@color/colorBackgroundWhite"
+                    android:padding="@dimen/padding_small"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/passportImage"
+                    app:layout_constraintEnd_toEndOf="@+id/passportImage"
+                    app:layout_constraintStart_toStartOf="@+id/passportImage"
+                    tools:text="Date: 20 Feb 2022" />
+
+                <FrameLayout
+                    android:id="@+id/passportProgressbar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/colorBackgroundGrayTransparent"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/passportImage"
+                    app:layout_constraintEnd_toEndOf="@+id/passportImage"
+                    app:layout_constraintStart_toStartOf="@+id/passportImage"
+                    app:layout_constraintTop_toTopOf="@+id/passportImage">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:minWidth="50dp"
+                        android:minHeight="50dp" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/membershipLevel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/passportImage"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="Joe Doe (GRIP)" />
+
+
+                <TextView
+                    android:id="@+id/membershipLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/font_medium"
+                    app:layout_constraintBottom_toTopOf="@+id/trainings"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/userName"
+                    tools:text="Membership Level: Apex" />
+
+                <TextView
+                    android:id="@+id/trainings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/rentals"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/membershipLevel"
+                    tools:text="Trainings: GT1" />
+
+                <TextView
+                    android:id="@+id/rentals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/dayWorker"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/trainings"
+                    tools:text="Rentals: Glove, Boot"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/dayWorker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_normal"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/groupBadge"
+                    app:layout_constraintEnd_toEndOf="@+id/userName"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/rentals"
+                    tools:text="Task: Crush Track" />
+                <!--
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/groupBarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="membershipLevel, dayWorker"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/riderViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="groupBadge,membershipLevel, rentals, trainings" />
+                    <!-->
+                <ImageView
+                    android:id="@+id/groupBadge"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:contentDescription="@string/cd_group_badge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:src="@drawable/ic_moto_green" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/btnStampPassPort"
+            style="@style/primaryButton"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/stamp_passport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

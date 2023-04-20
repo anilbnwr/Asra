@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        style="@style/stylePageMarginWithTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/cd_archie_banner"
+            android:id="@+id/archie_card_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shop_card_details_image_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/temp_archie_cards" />
+
+        <TextView
+            android:id="@+id/archie_cards_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/archie_card_image"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:id="@+id/archie_cards_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/archie_cards_item_content"
+            android:layout_centerInParent="true"
+            android:gravity="center|start"
+            tools:text="Price: $450"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:id="@+id/archie_btn_add_to_cart"
+            style="@style/primaryButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tracks_label_add_to_cart"
+            android:visibility="visible" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/archie_quantity_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/archie_cards_price"
+            android:layout_margin="20dp"
+            android:background="@color/colorBackgroundGray"
+            android:elevation="3dp">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/archie_cards_price"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/archie_quantity_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/archie_label_quantity"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:contentDescription="@string/button_to_add_quantity_by_1"
+                        android:id="@+id/archie_btn_plus"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/archie_tv_quantity"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/selector_button_plus_moto" />
+
+                    <ImageView
+                        android:id="@+id/archie_btn_minus"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/archie_tv_quantity"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="@string/button_to_descrement_quantity_by_1"
+                        android:src="@drawable/selector_button_minus_moto" />
+
+                    <TextView
+                        android:id="@+id/archie_tv_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center|start"
+                        tools:text="100"
+                        android:textSize="@dimen/font_large" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/archie_label_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center|start"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/label_quantity"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/archie_cards_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/archie_quantity_container"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dashboard_margin_end"
+                    android:gravity="center|start"
+                    tools:text="Total : $300"
+                    android:textSize="@dimen/font_large" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

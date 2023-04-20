@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/signature_red"
+        android:width="@dimen/ic_btn_size"
+        android:height="@dimen/ic_btn_size"
+        />
+
+</layer-list >

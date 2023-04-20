@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Login -->
+    <string name="login_label">Sign in to continue</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="hint_transponder">Personal Transponder Number</string>
+    <string name="hint_current_password">Current Password</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="login_label_skip">Continue as Guest</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="msg_password_reset_success">Password reset successfully.</string>
+    <string name="label_close_app">Exit</string>
+
+    <string name="label_forgot_password">Forgot Password?</string>
+
+    <string name="login_logo_content_description">Login Logo</string>
+
+    <string name="login_submit_text">Sign in</string>
+    <string name="label_view_all">View All</string>
+    <string name="label_checkout">Checkout</string>
+    <string name="label_reset_password">Reset Password</string>
+    <string name="label_change_password">Change Password</string>
+
+
+    <!-- Edit Profile Hint -->
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="txt_gender_male">Male</string>
+    <string name="txt_gender_female">Female</string>
+    <string name="txt_gender_unspecified">Unspecified</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_race_licence">Do you have a current race licence?</string>
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
+    <string name="hint_date_of_birth">Date of birth</string>
+    <string name="label_motor_cycle_header">Your Motorcycle</string>
+
+    <string name="hint_name_location">Name and Location</string>
+    <string name="hint_license_number">License Number</string>
+
+    <string name="hint_motor_cycle">Motor Cycle</string>
+    <string name="hint_motor_cycle_number">Motor Cycle No.</string>
+    <string name="txt_help_do_i_need_this">Do I need this?</string>
+
+    <string name="txt_mailing_address">Mailing Address</string>
+    <string name="txt_billing_address">Billing Address</string>
+    <string name="txt_ever_been_a_track">Have you ever been on a track?</string>
+    <string name="txt_skill_level">Skill Level</string>
+    <string name="txt_moto_race_no">Race Number</string>
+    <string name="txt_moto_ama_no">AMA Number</string>
+    <string name="txt_moto_ama_expiry">AMA Expires on</string>
+    <string name="txt_moto_ccs_no">CCS Number</string>
+    <string name="txt_moto_asra_no">ASRA Number</string>
+    <string name="txt_moto_nationality">Nationality</string>
+    <string name="txt_moto_sponsors">Sponsors</string>
+    <string name="txt_moto_teammates">Teammates</string>
+
+    <string name="txt_emergency_contact">Emergency Contact</string>
+    <string name="txt_moto_profile_info">Moto Gladiator Info</string>
+    <string name="txt_relationship">Relationship To You</string>
+    <string name="btn_add_address">Add Address</string>
+
+    <string name="txt_password">Password</string>
+    <string name="txt_confirm_password">Confirm Password</string>
+    <string name="txt_password_restriction">Must be 6–20 characters including letter, number and special character.</string>
+</resources>

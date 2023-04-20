@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    style="@style/stylePageMarginWithTop">
+
+    <LinearLayout
+        android:id="@+id/pref_notification"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:textColor="@color/settingsTitle"
+            android:textStyle="bold"
+            android:text="@string/label_language"
+            android:layout_marginEnd="@dimen/margin_x_large"/>
+
+        <RelativeLayout
+            android:id="@+id/pref_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settingsItemHeight">
+            <TextView
+                android:id="@+id/ln_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/language_english"
+                android:layout_marginEnd="@dimen/margin_x_large"/>
+            <TextView
+                android:id="@+id/select_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/settingsSubTitle"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/select_language"/>
+        </RelativeLayout>
+        <com.asra.mobileapp.common.Divider
+            android:id="@+id/languageDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_thick"
+            android:background="@color/colorMenuDivider"/>
+        <TextView
+            android:id="@+id/label_push_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:textStyle="bold"
+            android:text="@string/label_notification"
+            android:textColor="@color/settingsTitle"
+            android:layout_marginEnd="@dimen/margin_x_large"/>
+
+        <LinearLayout
+            android:id="@+id/notificationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pref_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:textStyle="bold"
+            android:text="@string/label_pref_more"
+            android:textColor="@color/settingsTitle"
+            android:layout_marginEnd="@dimen/margin_x_large"/>
+        <TextView
+            android:id="@+id/pref_terms_n_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/padding_normal"
+            android:paddingBottom="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_normal"
+            android:text="@string/pref_terms_n_condition"
+            android:textColor="@color/settingsSubTitle"
+            android:layout_marginEnd="@dimen/margin_x_large"/>
+    </LinearLayout>
+</RelativeLayout>
+</layout>

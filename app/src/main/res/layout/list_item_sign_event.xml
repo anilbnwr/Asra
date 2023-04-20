@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="@dimen/card_view_elevation">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal">
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:text="Joe Doe (GRIP)"
+            android:layout_toStartOf="@+id/btn_sign_star"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+
+
+
+        <View
+            android:id="@+id/rightEndView"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true" />
+        <Button
+            android:id="@+id/deleteBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="40dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorTextRed"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-4dp"
+            android:text="delete"/>
+
+        <ImageView
+            android:id="@+id/btn_sign_event"
+            android:layout_width="@dimen/ic_btn_size"
+            android:layout_height="@dimen/ic_btn_size"
+            android:layout_toStartOf="@+id/rightEndView"
+            android:src="@drawable/signature_green" />
+
+        <ImageView
+            android:id="@+id/btn_sign_star"
+            android:layout_width="@dimen/ic_btn_size"
+            android:layout_height="@dimen/ic_btn_size"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_toStartOf="@+id/btn_sign_event"
+            android:src="@drawable/ic_admin_star" />
+        <ImageView
+            android:id="@+id/btn_sign_td_not_purchased"
+            android:layout_width="@dimen/ic_btn_size"
+            android:layout_height="@dimen/ic_btn_size"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_toStartOf="@+id/btn_sign_star"
+            android:src="@drawable/ic_td_not_purchased" />
+
+        <ImageView
+            android:id="@+id/btn_sign_moto"
+            android:layout_width="@dimen/ic_btn_size"
+            android:layout_height="@dimen/ic_btn_size"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_toStartOf="@+id/btn_sign_td_not_purchased"
+            android:src="@drawable/ic_moto_green" />
+
+        <com.asra.mobileapp.common.Divider
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_thick"
+            android:layout_below="@+id/userName"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/item_divider" />
+
+        <View
+            android:id="@+id/skillLevelMarker"
+            android:layout_width="@dimen/divider_size"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/skill_level_label"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"/>
+
+        <View
+            android:id="@+id/dobStart"
+            android:layout_width="@dimen/divider_size"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/user_dob_value"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"/>
+        <TextView
+            android:id="@+id/skill_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_user_skill_level"
+            android:layout_below="@+id/titleDivider"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+
+        <TextView
+            android:id="@+id/skill_level_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleDivider"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_toEndOf="@+id/skill_level_label"
+            tools:text="E1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_medium" />
+        <ImageView
+            android:id="@+id/btn_upgrade_skill"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/titleDivider"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_toEndOf="@+id/skill_level_value"
+            android:src="@drawable/ic_skill_upgrade" />
+
+        <TextView
+            android:id="@+id/user_dob_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/titleDivider"
+            android:layout_alignParentEnd="true"
+            tools:text="10 Mar 2019"
+            android:textSize="@dimen/font_medium" />
+        <TextView
+            android:id="@+id/user_dob_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toStartOf="@+id/dobStart"
+            android:layout_alignStart="@+id/order_label"
+            android:layout_below="@+id/titleDivider"
+            android:text="@string/label_user_dob"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+        <!-- User ID -->
+        <TextView
+            android:id="@+id/user_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_below="@+id/skill_level_label"
+            android:text="@string/label_user_id"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+        <TextView
+            android:id="@+id/user_id_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/colorPrimary"
+            tools:text="#1234"
+            android:layout_below="@+id/skill_level_label"
+            android:layout_toEndOf="@+id/skillLevelMarker"
+            android:textSize="@dimen/font_medium" />
+
+        <!-- Order ID -->
+
+        <TextView
+            android:id="@+id/order_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/skill_level_label"
+            android:layout_toEndOf="@+id/dobStart"
+            android:text="#123"
+            android:textSize="@dimen/font_medium" />
+        <TextView
+            android:id="@+id/order_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skill_level_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toStartOf="@+id/dobStart"
+            android:text="@string/label_user_order"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_id_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/label_user_email"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+
+        <TextView
+            android:id="@+id/email_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_id_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/skillLevelMarker"
+            tools:text="abc@xyz.com"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_medium" />
+
+        <!-- Duties -->
+        <TextView
+            android:id="@+id/duties_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:visibility="gone"
+            android:text="@string/list_txt_duties"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+
+        <TextView
+            android:id="@+id/duties_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_value"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/skillLevelMarker"
+            android:textSize="@dimen/font_medium"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"
+            tools:text="Duties 1, Duties 2" />
+        <TextView
+            android:id="@+id/dayWorkLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duties_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/txt_job"
+            android:visibility="visible"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/font_medium" />
+
+
+        <TextView
+            android:id="@+id/dayWorkValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duties_label"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/skillLevelMarker"
+            android:textSize="@dimen/font_medium"
+            android:visibility="visible"
+            android:textColor="@color/colorPrimary"
+            tools:text="Crash Truck" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

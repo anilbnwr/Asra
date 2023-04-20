@@ -1,0 +1,43 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new beta build to Firebase App Distribution"
+      lane :distribute do |options|
+        if options[:group]
+          build_android_app(
+            task: "assemble",
+            flavor: "dev"
+          )
+
+          firebase_app_distribution(
+              app: "1:121047991117:android:28dd753327d38063522d04",
+              groups: options[:group],
+              release_notes_file: "../release-notes.txt",
+              firebase_cli_path:  File.exist?("../firebase-tools-linux") ? "../firebase-tools-linux" : "/firebase-tools-linux" # for pipeline
+          )
+        else
+          UI.user_error!("Missing group name!")
+        end
+      end
+
+end

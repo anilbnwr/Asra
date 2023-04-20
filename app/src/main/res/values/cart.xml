@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cd_cell_image">Shopping cart image</string>
+    <string name="ph_cart_item_name"> </string>
+    <string name="ph_cart_item_description">Brand: Ride Smart</string>
+    <string name="ph_price"> </string>
+    <string name="ph_event"> </string>
+    <string name="ph__start_price"> </string>
+    <string name="ph_date"> </string>
+    <string name="ph_role"> </string>
+    <string name="ph_size"> </string>
+
+    <string name="select_language">Language</string>
+    <string name="language_english">English</string>
+    <string name="label_notification">Push Notifications</string>
+    <string name="label_language">Language </string>
+    <string name="label_pref_more">More</string>
+    <string name="occasional_promotions">Occasional Promotions</string>
+    <string name="new_events_schedules">New Events &amp; Schedules</string>
+    <string name="pref_privacy_policy">Privacy Policy</string>
+    <string name="pref_terms_n_condition">Terms &amp; Conditions</string>
+
+
+
+    <string name="label_dismiss">Dismiss</string>
+    <string name="label_select_size">Select size:</string>
+
+
+
+    <string name="checkout_label_billing">Billing Address</string>
+    <string name="ph_billing">101SX\nOntario\nCalifornia\nSXKOS109</string>
+    <string name="checkout_label_edit_billing">Edit</string>
+    <string name="checkout_label_add_billing">Add Address</string>
+    <string name="checkout_title_step1">Checkout</string>
+    <string name="checkout_review_cart">Review Cart</string>
+    <string name="checkout_proceed_to_payment">Proceed To Payment</string>
+    <string name="checkout_wallet_info">Your wallet balance: </string>
+    <string name="checkout_coupon_label">Got an offer code?</string>
+    <string name="checkout_coupon_applied">Your coupon applied</string>
+    <string name="checkout_label_apply">Apply</string>
+    <string name="checkout_label_what_is_paypal">What is Paypal?</string>
+
+    <string name="checkout_payment_type_wallet">Wallet</string>
+    <string name="checkout_payment_type_paypal">Paypal</string>
+    <string name="checkout_payment_type_paypal_credit_card">Paypal/Credit Card/Debit Card</string>
+    <string name="checkout_payment_type_credit_card">Credit Card</string>
+    <string name="checkout_select_payment_method">Select Payment method</string>
+    <string name="checkout_place_order">Place Order</string>
+    <string name="checkout_coupon_hint">Coupon code</string>
+
+    <string name="label_checkout_summary">Cart Summary</string>
+    <string name="label_subtotal">Sub Total: </string>
+    <string name="label_coupon_balance">Coupon Applied:</string>
+    <string name="label_total">Total: </string>
+    <string name="label_cart_out_of_stock">Out of Stock</string>
+   <string name="checkout_msg_thank_you">Thank You!</string>
+
+    <string name="checkout_label_date">Purchase Date</string>
+    <string name="checkout_label_order">Order Number</string>
+
+    <string name="ph_user_name">Johnathan Doe</string>
+    <string name="ph_user_email">johndoe88@gmail.com</string>
+
+    <string name="checkout_amount">Amount</string>
+    <string name="checkout_status_completed">Completed</string>
+    <string name="checkout_label_step1">Shipping</string>
+    <string name="checkout_label_step2">Payment</string>
+    <string name="checkout_label_step3">Completed</string>
+    <string name="label_qty">Qty</string>
+    <string name="label_applied_wallet">Applied Wallet:</string>
+
+    <string name="label_packages">Packages: </string>
+    <string name="label_update">Update</string>
+    <string name="label_ignore">Ignore</string>
+    <string name="label_exit">Exit</string>
+    <string name="label_app_update_title">New Version Available</string>
+</resources>

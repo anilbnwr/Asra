@@ -1,0 +1,796 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_normal" />
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_profile_image_height"
+                android:background="@color/colorTextBlack"
+                android:contentDescription="@string/cd_profile_image"
+                android:src="@drawable/et_fallback_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_profile_camera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:contentDescription="@string/cd_camera_button"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/profileImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_firstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:hint="@string/hint_first_name"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/btn_profile_camera">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_lastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/hint_last_name"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_firstName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/hintGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/hint_gender"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_lastName" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/hintGender">
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/genderMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight=".5"
+                    android:checked="true"
+                    android:text="@string/txt_gender_male" />
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/genderFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_weight=".5"
+                    android:text="@string/txt_gender_female" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:focusable="false"
+                android:hint="@string/hint_email"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/gender">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/hint_phone"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/hintRaceLicence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:text="@string/hint_race_licence"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_phone" />
+
+            <RadioGroup
+                android:id="@+id/raceLicence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/hintRaceLicence">
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/licenceYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:enabled="false"
+                    android:text="@string/txt_yes" />
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/licenceNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/txt_no" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/hint_date_of_birth"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/raceLicence">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/drawable_ic_calendar"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/hintMotorCycle"
+                style="@style/profileEditHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/label_motor_cycle_header"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_dob" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_motorcycle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/hint_motor_cycle"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/hintMotorCycle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_motorcycleNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/hint_motor_cycle_number"
+                android:nextFocusForward="@+id/til_emergency_firstName"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_motorcycle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/shippingAddressBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/padding_normal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/border_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/mailingAddressBottom"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_motorcycleNumber" />
+
+            <TextView
+                android:id="@+id/headerMailingAddress"
+                style="@style/profileEditHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@color/colorBackgroundWhite"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_small"
+                android:paddingEnd="@dimen/margin_small"
+                android:text="@string/txt_mailing_address"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintBottom_toTopOf="@id/shippingAddressBorder"
+                app:layout_constraintTop_toTopOf="@id/shippingAddressBorder" />
+
+            <ImageView
+                android:id="@+id/btn_addMailingAddress"
+                android:layout_width="@dimen/ic_btn_size"
+                android:layout_height="@dimen/ic_btn_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:contentDescription="@string/cd_button_to_add_a_new_shipping_address"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_moto_plus"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintTop_toBottomOf="@id/headerMailingAddress" />
+
+
+            <ImageView
+                android:id="@+id/btn_editMailingAddress"
+                android:layout_width="@dimen/ic_btn_size"
+                android:layout_height="@dimen/ic_btn_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:contentDescription="@string/cd_edit_shipping_address"
+                android:src="@drawable/ic_moto_plus"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintTop_toBottomOf="@id/headerMailingAddress" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/shippingAddressButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="start"
+                app:constraint_referenced_ids="btn_addMailingAddress,btn_editMailingAddress" />
+
+            <TextView
+                android:id="@+id/mailingAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xx_large"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintEnd_toStartOf="@+id/shippingAddressButton"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/headerMailingAddress"
+                tools:text="No Address Found\n1.\n2\n3\n4" />
+
+            <View
+                android:id="@+id/mailingAddressBottom"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/shippingAddressButton"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/mailingAddress" />
+
+
+            <View
+                android:id="@+id/billingAddressBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_gray"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintBottom_toBottomOf="@+id/billingAddressBottom"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/shippingAddressBorder" />
+
+            <TextView
+                android:id="@+id/headerBillingAddress"
+                style="@style/profileEditHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundWhite"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="@dimen/margin_small"
+                android:paddingEnd="@dimen/margin_small"
+                android:text="@string/txt_billing_address"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintBottom_toTopOf="@id/billingAddressBorder"
+                app:layout_constraintTop_toTopOf="@id/billingAddressBorder" />
+
+            <ImageView
+                android:id="@+id/btn_addBillingAddress"
+                android:layout_width="@dimen/ic_btn_size"
+                android:layout_height="@dimen/ic_btn_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:contentDescription="@string/cd_button_to_add_a_new_shipping_address"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_moto_plus"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintTop_toBottomOf="@id/headerBillingAddress" />
+
+
+            <ImageView
+                android:id="@+id/btn_editBillingAddress"
+                android:layout_width="@dimen/ic_btn_size"
+                android:layout_height="@dimen/ic_btn_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:contentDescription="@string/cd_edit_shipping_address"
+                android:src="@drawable/ic_moto_plus"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintTop_toBottomOf="@id/headerBillingAddress" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/billingAddressButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="start"
+                app:constraint_referenced_ids="btn_addBillingAddress,btn_editBillingAddress" />
+
+            <TextView
+                android:id="@+id/billingAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xx_large"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintEnd_toStartOf="@+id/billingAddressButton"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/headerBillingAddress"
+                tools:text="No Address Found\n1.\n2\n3\n4" />
+
+            <View
+                android:id="@+id/billingAddressBottom"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/billingAddressButton"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/billingAddress" />
+
+            <TextView
+                android:id="@+id/hintEverOnTrack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/billingAddressBorder"
+                android:text="@string/txt_ever_been_a_track" />
+
+            <RadioGroup
+                android:id="@+id/trackCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/hintEverOnTrack">
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/trackYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:enabled="false"
+                    android:text="@string/txt_yes" />
+
+                <com.asra.mobileapp.common.ETRadioButton
+                    android:id="@+id/trackNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:enabled="false"
+                    android:text="@string/txt_no" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_skillLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/trackCheck"
+                android:focusable="false"
+                android:hint="@string/txt_skill_level">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Moto Gladiator Info !-->
+            <View
+                android:id="@+id/motoInfoBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/padding_normal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/border_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/til_moto_teammates"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_skillLevel" />
+            <TextView
+                android:id="@+id/hintMotoInfo"
+                style="@style/profileEditHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:background="@color/colorBackgroundWhite"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toTopOf="@id/motoInfoBorder"
+                app:layout_constraintBottom_toTopOf="@id/motoInfoBorder"
+                android:text="@string/txt_moto_profile_info" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_race_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toTopOf="@id/hintMotoInfo"
+                android:hint="@string/txt_moto_race_no">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_ama_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_race_no"
+                android:hint="@string/txt_moto_ama_no">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_ama_expiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_ama_no"
+                android:focusable="false"
+                android:hint="@string/txt_moto_ama_expiry">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_ccs_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_ama_expiry"
+                android:hint="@string/txt_moto_ccs_no">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_asra_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_ccs_number"
+                android:hint="@string/txt_moto_asra_no">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_nationality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_asra_number"
+                android:hint="@string/txt_moto_nationality">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_sponsors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_nationality"
+                android:hint="@string/txt_moto_sponsors">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_moto_teammates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_moto_sponsors"
+                android:hint="@string/txt_moto_teammates">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/motoInfoGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="motoInfoBorder,hintMotoInfo,til_moto_race_no,til_moto_ama_no,til_moto_ama_expiry,til_moto_ccs_number,til_moto_asra_number,til_moto_nationality,til_moto_sponsors,til_moto_teammates"
+                />
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/motoInfoVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="motoInfoBorder,til_skillLevel"/>
+            <View
+                android:id="@+id/emergencyContactBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/padding_normal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/border_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/til_emergency_relationship"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/motoInfoVisibility" />
+
+            <TextView
+                android:id="@+id/hintEmergencyContact"
+                style="@style/profileEditHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:background="@color/colorBackgroundWhite"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toTopOf="@id/emergencyContactBorder"
+                app:layout_constraintBottom_toTopOf="@id/emergencyContactBorder"
+                android:text="@string/txt_emergency_contact" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_emergency_firstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/hintEmergencyContact"
+                android:hint="@string/hint_first_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_emergency_lastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_emergency_firstName"
+                android:hint="@string/hint_last_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_emergency_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_emergency_lastName"
+                android:hint="@string/hint_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_emergency_relationship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/til_emergency_phone"
+                android:hint="@string/txt_relationship">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:drawableEnd="@drawable/arrow_down_grey"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/btnSave"
+                style="@style/primaryButton"
+                android:layout_width="0dp"
+                android:text="@string/label_btn_save"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/emergencyContactBorder"
+                android:layout_marginBottom="@dimen/margin_normal"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                app:layout_constraintStart_toStartOf="@id/guideStart"
+                app:layout_constraintTop_toBottomOf="@id/btnSave"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="CheckoutIndicator">
+        <attr name="startText" format="string" localization="suggested" />
+        <attr name="middleText" format="string" localization="suggested" />
+        <attr name="endText" format="string" localization="suggested" />
+        <attr name="checkoutStatus" format="integer" />
+
+        <attr name="checkoutActiveIcon" format="integer" />
+        <attr name="checkoutInactiveIcon" format="integer" />
+        <attr name="checkoutCompleteIcon" format="integer" />
+
+
+        <attr name="checkoutFontSize" format="dimension" />
+        <attr name="checkoutStrokeWidth" format="dimension" />
+        <attr name="dividingSpace" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

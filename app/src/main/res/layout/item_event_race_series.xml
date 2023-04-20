@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/raceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/colorTextWhite"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_title"
+        android:background="@color/moto_primary"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_small"
+        tools:text="Race series 1"/>
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:orientation="horizontal"
+        android:weightSum="2.5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_medium"
+            android:text="Select Class" />
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:text="Price"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_medium" />
+        <TextView
+            android:id="@+id/lblbikeData"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="25dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="@string/bike_data"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/event_class_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/item_class_event"/>
+        <include layout="@layout/item_class_event"/>
+    </LinearLayout>
+</LinearLayout>

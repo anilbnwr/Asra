@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/ic_btn_size"
+        android:layout_height="@dimen/ic_btn_size"
+        tools:src="@drawable/moto_logo_256"
+        android:layout_margin="@dimen/margin_small"
+        android:contentDescription="@string/cd_host_icon"/>
+
+</RelativeLayout>

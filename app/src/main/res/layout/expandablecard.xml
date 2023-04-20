@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/card_elevation"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/expandableRightIcon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_normal" />
+
+            <TextView
+                android:id="@+id/expandableTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/padding_normal"
+                android:paddingBottom="@dimen/padding_normal"
+                android:text="@string/card_upcoming_event"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cardContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <com.asra.mobileapp.common.Divider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size"
+                android:background="@color/colorMenuDivider" />
+            <RelativeLayout
+                android:id="@+id/mainContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/expandableCreditImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/expandableDataImage"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/expandableImageProgressbar"
+                    android:layout_width="@dimen/progressbar_size"
+                    android:layout_height="@dimen/progressbar_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="@dimen/margin_x_large" />
+
+                <RelativeLayout
+                    android:id="@+id/middleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_toStartOf="@+id/expandableDataImage"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/expandableDataTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/expandableDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_below="@+id/expandableDataTitle"
+                        android:textSize="@dimen/font_medium" />
+
+                    <TextView
+                        android:id="@+id/expandableOrderDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expandableDate"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:textSize="@dimen/font_medium" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.asra.mobileapp.common.Divider
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size"
+                android:layout_marginTop="@dimen/margin_x_small"
+                android:background="@color/colorMenuDivider" />
+
+            <TextView
+                android:id="@+id/btn_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:padding="5dp"
+                android:text="@string/label_see_more"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:visibility="visible" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/expandableErrorView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        style="@style/stylePageMarginWithTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topLayout"
+            android:background="@color/colorBackgroundGray"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/et_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:context=".component.dashboard.DashboardActivity"
+                tools:listitem="@layout/list_item_et_card">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp">
+
+            <FrameLayout
+                android:id="@+id/imageProgressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_image_height"
+                android:background="@color/colorBackgroundGrayTransparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="50dp"
+                    android:minHeight="50dp"
+
+                    />
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/event_banner"
+                android:layout_width="@dimen/et_image_width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_normal" />
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_banner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/signIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventDate"
+                android:background="@color/colorBackgroundGray"
+                android:drawableStart="@drawable/drawable_ic_signature"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_normal"
+                android:paddingTop="@dimen/margin_normal"
+                android:paddingBottom="@dimen/margin_normal"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/userCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signIndicator"
+                android:background="@color/colorBackgroundGray"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:paddingTop="@dimen/margin_normal"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/font_medium" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/emptyMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topLayout"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@color/colorBackgroundGray"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_normal"
+            android:visibility="gone"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/font_medium" />
+    </RelativeLayout>
+</layout>

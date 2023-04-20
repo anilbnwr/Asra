@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/btnRegister"
+            style="@style/primaryButton"
+            android:layout_width="match_parent"
+            android:text="@string/label_btn_register"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_normal"/>
+        <com.asra.mobileapp.common.ETCheckBox
+            android:id="@+id/cbAgreeTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:checked="false"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/txt_agree_terms"
+            android:layout_above="@+id/btnRegister"
+            android:textColor="@color/colorTextBlack"
+            />
+        <TextView
+            android:id="@+id/text_terms_n_conditions"
+            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:text="@string/txt_terms_n_conditions"
+            android:layout_toEndOf="@+id/cbAgreeTerms"
+            android:layout_above="@+id/btnRegister"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/margin_large"/>
+        <ScrollView
+            android:id="@+id/scrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cbAgreeTerms">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/margin_large" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/margin_normal" />
+                <TextView
+                    android:id="@+id/hintRaceLicence"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/hint_race_licence"
+                    android:layout_marginTop="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <RadioGroup
+                    android:id="@+id/raceLicence"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/hintRaceLicence">
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/licenceYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:checked="true"
+                        android:text="@string/txt_yes" />
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/licenceNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:text="@string/txt_no" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/hintEverOnTrack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/txt_ever_been_a_track"
+                    android:layout_marginTop="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@+id/raceLicence" />
+                <RadioGroup
+                    android:id="@+id/trackCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/hintEverOnTrack">
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/trackYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:checked="true"
+                        android:text="@string/txt_yes" />
+
+                    <com.asra.mobileapp.common.ETRadioButton
+                        android:id="@+id/trackNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_weight=".5"
+                        android:text="@string/txt_no" />
+                </RadioGroup>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_skillLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/txt_skill_level"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/trackCheck">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:focusable="false"
+                        android:drawableEnd="@drawable/arrow_down_grey"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.asra.mobileapp.common.ETCheckBox
+                    android:id="@+id/cbSubscribe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:checked="false"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:text="@string/txt_subscribe_discount"
+                    android:textColor="@color/colorTextBlack"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/til_skillLevel"/>
+
+                <TextView
+                    android:id="@+id/hintPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/txt_password"
+                    android:textSize="@dimen/font_xlarge"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_large"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@+id/cbSubscribe" />
+                <TextView
+                    android:id="@+id/hintPasswordRestriction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/txt_password_restriction"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@+id/hintPassword" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/txt_password"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/hintPasswordRestriction">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:hint="@string/txt_confirm_password"
+                    app:layout_constraintEnd_toEndOf="@id/guideEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideStart"
+                    app:layout_constraintTop_toBottomOf="@id/til_password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

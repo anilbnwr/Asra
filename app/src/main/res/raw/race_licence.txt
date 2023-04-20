@@ -1,0 +1,11 @@
+<p>
+      A race license is required to participate in Motogladiator racing. Please sign up for the Race Certification
+      training prior to registering for any racing. Participation in a Mock race and rental transponder are
+      included on the date you have training. You must be an intermediate or above group level rider to take the Race Certification
+      Training.
+    </p>
+
+    <p>
+      If you have prior race experience that you feel qualifies you to participate in the Motogladiator race
+      series, please contact support at <a href="tel: 702-602-2770">702-602-2770</a>  or support@evolvegt.com.
+</p>

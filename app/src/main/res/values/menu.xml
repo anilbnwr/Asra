@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_home">HOME</string>
+    <string name="tab_tracks">TRACKS</string>
+    <string name="tab_gear">GEAR</string>
+    <string name="tab_cart">CART</string>
+    <string name="tab_events">EVENTS</string>
+    <string name="tab_shop">SHOP</string>
+    <string name="menu_toolbar_login">Login</string>
+    <string name="menu_toolbar_logout">Logout</string>
+    <string name="menu_toolbar_search">Search</string>
+    <string name="menu_toolbar_switch_module">Switch Module</string>
+   <!-- <string name="menu_toolbar_switch_app">Switch App</string>-->
+    <string name="menu_events_as_grid">Show As Grid</string>
+    <string name="menu_events_as_list">Show As List</string>
+    <string name="sign_event_search_hint">Search by username, event name</string>
+    <string name="hint_search_by_event_name">Search by event name</string>
+    <string name="hint_search_by_user_name">Search by user name</string>
+
+
+    <string name="menu_filter">Filter</string>
+
+</resources>

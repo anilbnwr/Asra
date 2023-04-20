@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?><!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>checkout_transaction_success</key>
+        <value>Your transaction was successful.</value>
+    </entry>
+
+    <entry>
+        <key>item_out_of_stock</key>
+        <value>Out of Stock</value>
+    </entry>
+
+
+    <entry>
+        <key>cart_empty_message</key>
+        <value>Sorry, your cart is empty.</value>
+    </entry>
+
+    <entry>
+        <key>private_event_code_required</key>
+        <value>Secret Code Required</value>
+    </entry>
+
+
+    <entry>
+        <key>error_private_event_code</key>
+        <value>Please enter the secret code.</value>
+    </entry>
+
+    <entry>
+        <key>error_no_transponder</key>
+        <value>Please select transponder or enter your transponder number</value>
+    </entry>
+
+    <entry>
+        <key>error_no_skill_set</key>
+        <value>Please select a skill set</value>
+    </entry>
+    <entry>
+        <key>error_no_active_class</key>
+        <value>Please select at least one class</value>
+    </entry>
+
+    <entry>
+        <key>message_skill_not_eligible</key>
+        <value>GT1 and E1 are not eligible to participate in race.</value>
+    </entry>
+
+    <entry>
+        <key>payment_credit_not_supported</key>
+        <value>Sorry, this mode of payment is not available right now.\n Please use any other mode of payment.</value>
+    </entry>
+    <entry>
+        <key>msg_cart_event_added</key>
+        <value>Your event has been added to the cart successfully.</value>
+    </entry>
+
+    <entry>
+        <key>msg_cart_membership_added</key>
+        <value>Your membership has been added to the cart successfully.</value>
+    </entry>
+
+    <entry>
+        <key>msg_cart_gift_added</key>
+        <value>Your Gift Card has been added to the cart successfully.</value>
+    </entry>
+    <entry>
+        <key>msg_cart_archie_added</key>
+        <value>Your Archie Card has been added to the cart successfully.</value>
+    </entry>
+    <entry>
+        <key>error_cart_event_failed</key>
+        <value>Sorry, the event could not be added to the cart.</value>
+    </entry>
+
+    <entry>
+        <key>msg_cart_product_added</key>
+        <value>Your Product has been added to the cart successfully.</value>
+    </entry>
+
+
+    <entry>
+        <key>error_cart_membership_failed</key>
+        <value>Sorry, this membership could not be added to the cart.</value>
+    </entry>
+
+    <entry>
+        <key>checkout_label_no_billing</key>
+        <value>Unfortunately, no billing address has been found. Please add your billing address.</value>
+    </entry>
+    <entry>
+        <key>checkout_applying_coupon_code</key>
+        <value>We're currently validating your coupon code, please wait...</value>
+    </entry>
+
+    <entry>
+        <key>msg_reading_cart_summary</key>
+        <value>We're summarizing your order, please wait.</value>
+    </entry>
+    <entry>
+        <key>error_out_of_stock_found</key>
+        <value>One of the items in your cart is out of stock. Please review your cart.</value>
+    </entry>
+
+    <entry>
+        <key>err_no_sign_events</key>
+        <value>Sorry, there are currently no events available.</value>
+    </entry>
+    <entry>
+        <key>err_no_user_events</key>
+        <value>There are currently no users enrolled for this event.</value>
+    </entry>
+
+    <entry>
+        <key>error_generic_message</key>
+        <value>Sorry, something went wrong, please try again in a couple minutes.</value>
+    </entry>
+    <entry>
+        <key>error_no_network</key>
+        <value>Looks like you are offline.|||Please check the network and try again.</value>
+    </entry>
+    <entry>
+        <key>error_no_items_found</key>
+        <value>Sorry, no items have been found.</value>
+    </entry>
+
+
+    <entry>
+        <key>error_no_event</key>
+        <value>Sorry, no event has been found.</value>
+    </entry>
+    <entry>
+        <key>error_no_credit</key>
+        <value>You have no credit history</value>
+    </entry>
+    <entry>
+        <key>error_no_data</key>
+        <value>Data has not been found.</value>
+    </entry>
+
+    <entry>
+        <key>msg_updating_billing_address</key>
+        <value>Please wait, we're updating your billing address.</value>
+    </entry>
+    <entry>
+        <key>msg_billing_address_updated</key>
+        <value>Your Billing Address has been updated</value>
+    </entry>
+
+    <entry>
+        <key>msg_updating_mailing_address</key>
+        <value>Please wait, we're updating your mailing address.</value>
+    </entry>
+    <entry>
+        <key>msg_mailing_address_updated</key>
+        <value>Your mailing address has been updated</value>
+    </entry>
+
+    <entry>
+        <key>events_empty_message</key>
+        <value>Sorry, there is no events available right now.</value>
+    </entry>
+
+    <entry>
+        <key>archie_cards_empty_message</key>
+        <value>There are no Archie Cards available right now.</value>
+    </entry>
+    <entry>
+        <key>gift_cards_empty_message</key>
+        <value>There are no Gift Cards available.</value>
+    </entry>
+    <entry>
+        <key>products_empty_message</key>
+        <value>Unfortunately, there is no products available right now.</value>
+    </entry>
+
+
+    <entry>
+        <key>msg_adding_event_to_cart</key>
+        <value>Please wait, we're adding this event to the cart... </value>
+    </entry>
+    <entry>
+        <key>msg_syncing_cart</key>
+        <value>Please wait while we are syncing your cart list.</value>
+    </entry>
+
+    <entry>
+        <key>msg_logging_out</key>
+        <value>You are now logging out...</value>
+    </entry>
+    <entry>
+        <key>msg_saving_signature</key>
+        <value>Please wait, We're saving your signature.</value>
+    </entry>
+    <entry>
+        <key>msg_add_event_to_cart</key>
+        <value>Please wait, we're adding this to your cart...</value>
+    </entry>
+    <entry>
+        <key>error_signature_not_saved</key>
+        <value>Signature could not be saved.</value>
+    </entry>
+    <entry>
+        <key>msg_signature_saved</key>
+        <value>Your Signature has been saved.</value>
+    </entry>
+
+
+    <entry>
+        <key>msg_deleting_from_cart</key>
+        <value>We are removing an item from your cart.</value>
+    </entry>
+    <entry>
+        <key>error_place_order_failed</key>
+        <value>Purchase failed. Please try again.</value>
+    </entry>
+    <entry>
+        <key>msg_transaction_pending</key>
+        <value>Please wait, your transaction in progress.</value>
+    </entry>
+    <entry>
+        <key>error_transaction_canceled</key>
+        <value>Transaction canceled.</value>
+    </entry>
+
+    <entry>
+        <key>checkout_error_empty_coupon</key>
+        <value>Please enter a valid coupon</value>
+    </entry>
+    <entry>
+        <key>msg_checkout_place_order</key>
+        <value>Please wait, Placing your order</value>
+    </entry>
+
+    <entry>
+        <key>checkout_label_paypal_description</key>
+        <value>Pay via PayPal: you can pay with your credit card if you don’t have a PayPal account.</value>
+    </entry>
+
+    <entry>
+        <key>error_specify_receiver_name</key>
+        <value>Please provide the name of receiver</value>
+    </entry>
+
+    <entry>
+        <key>error_specify_receiver_email</key>
+        <value>Please provide a valid email</value>
+    </entry>
+
+    <entry>
+        <key>msg_logging_in</key>
+        <value>Logging in...</value>
+    </entry>
+
+    <entry>
+        <key>msg_loading</key>
+        <value>Loading contents...</value>
+    </entry>
+
+    <entry>
+        <key>error_empty_username</key>
+        <value>Please enter your email.</value>
+    </entry>
+
+    <entry>
+        <key>error_empty_password</key>
+        <value>Please enter your password.</value>
+    </entry>
+
+
+    <entry>
+        <key>signature_disclaimer_text</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>msg_version_latest</key>
+        <value>The latest version is already installed.</value>
+    </entry>
+
+    <entry>
+        <key>msg_version_update</key>
+        <value>New version available in store. Please update.</value>
+    </entry>
+
+    <entry>
+        <key>app_latest_version_android</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>error_no_search_result_for_user</key>
+        <value>Sorry, We could not find any users matching %s</value>
+    </entry>
+
+    <entry>
+        <key>error_no_search_result_for_events</key>
+        <value>Sorry, We could not find any events matching %s</value>
+    </entry>
+
+    <entry>
+        <key>label_user_count</key>
+        <value>Showing %s users</value>
+    </entry>
+
+    <entry>
+        <key>error_no_mailing_address</key>
+        <value>No mailing address found. Please add a new address</value>
+    </entry>
+
+    <entry>
+        <key>error_no_billing_address</key>
+        <value>No billing address found. Please add a new address</value>
+    </entry>
+
+    <entry>
+        <key>coupon_balance_changed</key>
+        <value>Your coupon balance changed. Please review the total and continue.</value>
+    </entry>
+
+    <entry>
+        <key>label_signature_status_indicator</key>
+        <value>Indicates the user not signed the disclaimer yet.</value>
+    </entry>
+
+    <entry>
+        <key>error_paypal_payment_not_available</key>
+        <value>Sorry, paypal payment service is not available now. Please try again later.</value>
+    </entry>
+
+    <entry>
+        <key>profile_updated_successfully</key>
+        <value>Profile updated successfully.</value>
+    </entry>
+
+    <entry>
+        <key>updating_profile</key>
+        <value>Please wait, we are updating your profile</value>
+    </entry>
+
+    <entry>
+        <key>syncing_local_cart</key>
+        <value>Please wait, we are syncing your cart list.</value>
+    </entry>
+
+    <entry>
+        <key>syncing_local_cart_failed</key>
+        <value>Sorry, your cart list could not be synced.</value>
+    </entry>
+
+    <entry>
+        <key>local_cart_synced_successfully</key>
+        <value>Your cart list synced successfully.</value>
+    </entry>
+
+    <entry>
+        <key>reading_your_preferences</key>
+        <value>Please wait, reading your preferences...</value>
+    </entry>
+
+    <entry>
+        <key>preferences_updated_successfully</key>
+        <value>Your notification preferences updated.</value>
+    </entry>
+    <entry>
+        <key>preferences_update_failed</key>
+        <value>Your notification preferences could not be updated.</value>
+    </entry>
+
+    <entry>
+        <key>upgrading_skill_level</key>
+        <value>Please wait, upgrading skill level...</value>
+    </entry>
+
+    <entry>
+        <key>skill_level_upgraded_successfully</key>
+        <value>Skill Level upgraded successfully</value>
+    </entry>
+
+    <entry>
+        <key>skill_level_upgrade_failed</key>
+        <value>Sorry, Skill Level upgrade failed. Please try again.</value>
+    </entry>
+
+    <entry>
+        <key>terms_n_conditions</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>error_current_password_empty</key>
+        <value>Please enter current password.</value>
+    </entry>
+
+    <entry>
+        <key>error_new_password_empty</key>
+        <value>Please enter new password.</value>
+    </entry>
+
+    <entry>
+        <key>error_confirm_password</key>
+        <value>Your password and confirmation password do not match.</value>
+    </entry>
+
+    <entry>
+        <key>msg_changing_password</key>
+        <value>Changing your password, please wait...</value>
+    </entry>
+
+    <entry>
+        <key>msg_pwd_reset_email_required</key>
+        <value>Please enter a valid email.</value>
+    </entry>
+    <entry>
+        <key>msg_resetting_password</key>
+        <value>Please wait. Your password is being reset.</value>
+    </entry>
+
+    <entry>
+        <key>text_description_reset_password</key>
+        <value>Please provide your registered email. We will send the password reset link to this email.</value>
+    </entry>
+
+    <entry>
+        <key>password_reset_successfully</key>
+        <value>Password Reset Successfully</value>
+    </entry>
+    <entry>
+        <key>purchase_order_number</key>
+        <value>Your order number is %s</value>
+    </entry>
+
+    <entry>
+        <key>event_cancel_confirm_title</key>
+        <value></value>
+    </entry>
+
+    <entry>
+        <key>event_cancel_confirm_message</key>
+        <value>You are about to cancel the event - %s. Do you really want to proceed?</value>
+    </entry>
+
+    <entry>
+        <key>event_cancel_indicator_message</key>
+        <value>Please wait, we are cancelling your event</value>
+    </entry>
+
+    <entry>
+        <key>event_cancel_success_message</key>
+        <value>Event Cancelled successfully.</value>
+    </entry>
+
+    <entry>
+        <key>msg_cart_changed_review_required</key>
+        <value>Your cart has been modified. Please review the changes.</value>
+    </entry>
+ <entry>
+        <key>reading_user_signature</key>
+        <value>Please wait, we are reading signature.</value>
+    </entry>
+
+    <entry>
+        <key>app_update_optional_message</key>
+        <value>You have new version %s available with new features. Please update.</value>
+    </entry>
+
+    <entry>
+        <key>app_update_title</key>
+        <value>New Version Available</value>
+    </entry>
+
+    <entry>
+        <key>msg_reading_upcoming_events</key>
+        <value>Loading...</value>
+    </entry>
+
+    <entry>
+        <key>msg_reading_past_events</key>
+        <value>Loading...</value>
+    </entry>
+
+    <entry>
+        <key>analytics_enabled</key>
+        <value>1</value>
+    </entry>
+
+    <entry>
+        <key>msg_reading_all_events</key>
+        <value>Loading...</value>
+    </entry>
+    <entry>
+        <key>msg_signing_up</key>
+        <value>Please wait, We're creating your account.</value>
+    </entry>
+    <entry>
+        <key>msg_cart_deleted</key>
+        <value>Successfully deleted.</value>
+    </entry>
+
+    <entry>
+        <key>app_update_mandatory_message</key>
+        <value>Your current version of the application is outdated and won't work any longer. Please update to the latest version %s to continue enjoying the %s application.</value>
+    </entry>
+
+
+    <entry>
+        <key>skill_levels</key>
+        <value>[
+            "GT1",
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "CIT (Racer)",
+            "Staff",
+            "Coach"
+            ]</value>
+    </entry>
+
+    <entry>
+        <key>track_yes_skill_levels</key>
+        <value>[
+
+            "E1",
+            "E2",
+            "E3"
+
+            ]</value>
+    </entry>
+    <entry>
+        <key>track_no_skill_levels</key>
+        <value>[
+
+            "GT1"
+
+            ]</value>
+    </entry>
+
+    <entry>
+        <key>emergency_relation_ships</key>
+        <value>[
+            "Friend",
+            "Parent",
+            "Local Guardian",
+            "Other"
+            ]</value>
+    </entry>
+
+    <entry>
+        <key>saving_policy_agreement</key>
+        <value>Saving policy agreement.</value>
+    </entry>
+
+    <entry>
+        <key>loading_waiver_events</key>
+        <value>Loading Waiver Events...</value>
+    </entry>
+
+    <entry>
+        <key>loading_waiver_details</key>
+        <value>Loading details...</value>
+    </entry>
+
+    <entry>
+        <key>saving_waiver_signature</key>
+        <value>Saving signature...</value>
+    </entry>
+
+    <entry>
+        <key>error_no_selfie_passport</key>
+        <value>Please upload your selfie.</value>
+    </entry>
+
+    <entry>
+        <key>error_empty_signature</key>
+        <value>Please do sign.</value>
+    </entry>
+
+
+</defaultsMap>

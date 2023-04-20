@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/giftCardScrollView"
+            style="@style/stylePageMarginWithTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/gift_btn_add_to_cart"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/gift_card_image_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackgroundWhite">
+
+                    <ImageView
+                        android:id="@+id/gift_card_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/shop_card_details_image_height"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/temp_gift_card" />
+
+                    <ProgressBar
+                        android:id="@+id/gift_card_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:minWidth="50dp"
+                        android:minHeight="50dp"
+
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/gift_cards_item_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gift_card_image_container"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font_large" />
+
+                <TextView
+                    android:id="@+id/gift_cards_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gift_cards_item_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|start"
+                    android:padding="10dp"
+                    android:text="Price: $450"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gift_quantity_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gift_cards_price"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorBackgroundGray"
+                    android:elevation="3dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gift_cards_price"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:id="@+id/gift_card_errorView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/gift_card_receiver"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gift_card_errorView"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:hint="@string/shop_hint_receiver_name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:maxLines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/gift_card_receiver_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gift_card_receiver"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="25dp"
+                            android:hint="@string/shop_hint_receiver_email">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/gift_btn_add_to_cart"
+            style="@style/primaryButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/tracks_label_add_to_cart"
+            android:visibility="visible" />
+    </RelativeLayout>
+</layout>

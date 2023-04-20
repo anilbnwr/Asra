@@ -1,0 +1,22 @@
+# This is a sample build configuration for Java (Gradle).
+# Check our guides at https://confluence.atlassian.com/x/zd-5Mw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: uber/android-build-environment:latest
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - echo y | android update sdk --filter "extra-android-m2repository" --no-ui -a
+          # Accept preview licences
+          - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_SDK_HOME/licenses/android-sdk-preview-license"
+          - echo "Start default step"
+          - ./gradlew assemblePlaystore
+          - echo "PlayStore Build generated!"
+  develop: # target 'develop' branch only
+    - step:
+        script: # Modify the commands below to build your repository.
+          - echo "Start develop step"
+          - echo "PlayStore Build generated!"

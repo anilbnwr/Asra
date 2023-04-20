@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- add the following item to your menu.xml -->
+
+    <item
+        android:id="@+id/menu_toolbar_cart"
+        android:icon="@drawable/cart_with_badge"
+        android:title="@string/tab_cart"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_switch_app"
+        android:icon="@drawable/ic_menu_filter"
+        android:visible="false"/>
+</menu>

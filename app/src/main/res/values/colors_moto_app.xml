@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="moto_primary">@color/colorBlue</color>
+    <color name="colorBlue">#376cde</color>
+
+    <color name="colorLightBlue">#FF7189E7</color>
+    <color name="color_moto_bg_price">#FF3853C2</color>
+    <color name="motoPrimaryDark">#FF151E49</color>
+    <color name="darkBlue">#FF151E49</color>
+
+    <color name="tab_moto_background">#376cde</color>
+</resources>

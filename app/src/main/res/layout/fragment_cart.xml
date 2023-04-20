@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/stylePageMargin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/cart_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/cart_checkout_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundGray"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/cart_total_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:maxLines="1"
+                    android:text="@string/ph_dashboard_member_available_credits_value"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/cart_total_value"
+                    android:maxLines="1"
+                    android:text="@string/label_total"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_cart_checkout"
+                style="@style/primaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_checkout_container"
+                android:text="@string/label_checkout" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cart_out_of_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dashboard_margin_start"
+            android:layout_marginEnd="@dimen/dashboard_margin_end"
+            android:background="@color/colorOutOfStockGrey"
+            android:padding="10dp"
+            android:textColor="@color/color_cart_out_of_stock"
+            android:textSize="@dimen/font_medium"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cart_bottom_container"
+            android:layout_below="@+id/tv_cart_out_of_stock"
+            android:layout_marginTop="@dimen/margin_small"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:context=".component.dashboard.DashboardActivity"
+            tools:listitem="@layout/list_item_cart">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+</layout>

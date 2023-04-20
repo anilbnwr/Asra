@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x_large"
+        android:textColor="@color/settingsSubTitle"
+        tools:text="Prference"
+        android:checked="true"
+        app:thumbTint="@color/switch_ev_color"
+        android:layout_marginBottom="@dimen/margin_x_large"/>
+    <com.asra.mobileapp.common.Divider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_thick"
+        android:background="@color/colorMenuDivider"/>
+</LinearLayout>

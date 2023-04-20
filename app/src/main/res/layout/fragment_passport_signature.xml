@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/btnUploadSelfie"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/round_rect_green"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/titleSignPad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/cd_camera_button"
+            android:src="@drawable/ic_camera_48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnUploadSelfie"
+            app:layout_constraintEnd_toStartOf="@+id/txt_upload"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/btnUploadSelfie"
+            app:layout_constraintTop_toTopOf="@+id/btnUploadSelfie"
+
+            />
+        <ImageView
+            android:id="@+id/cameraPreview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:contentDescription="@string/cd_camera_button"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnUploadSelfie"
+            app:layout_constraintEnd_toEndOf="@+id/btnUploadSelfie"
+            app:layout_constraintTop_toTopOf="@+id/btnUploadSelfie"
+
+            />
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cbAgreeTerms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tncHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="Sample Terms And Conditions" />
+
+                <TextView
+                    android:id="@+id/tncContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_medium"
+                    tools:text="@tools:sample/lorem/random" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btnClearSignPad"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@drawable/selector_button_grey"
+            android:gravity="center"
+            android:text="@string/btn_label_clear"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextBlack"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSaveSign"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/btnSaveSign"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@drawable/selector_button_primary"
+            android:gravity="center"
+            android:text="@string/btn_label_save"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnCloseSignPad"
+            app:layout_constraintStart_toEndOf="@+id/btnClearSignPad" />
+
+        <TextView
+            android:id="@+id/btnCloseSignPad"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@drawable/selector_button_red"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_normal"
+            android:text="@string/btn_label_close"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSaveSign" />
+
+        <TextView
+            android:id="@+id/titleSignPad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="@string/title_dialog_signature"
+            android:textColor="@color/colorTextBlack"
+            app:layout_constraintBottom_toTopOf="@+id/signature_pad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="@string/take_a_photo"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnUploadSelfie"
+            app:layout_constraintEnd_toEndOf="@+id/btnUploadSelfie"
+            app:layout_constraintStart_toEndOf="@+id/camera"
+            app:layout_constraintTop_toTopOf="@+id/btnUploadSelfie" />
+
+        <TextView
+            android:id="@+id/agreementLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/title_terms_n_condition"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintBottom_toBottomOf="@+id/cbAgreeTerms"
+            app:layout_constraintStart_toEndOf="@+id/cbAgreeTerms"
+            app:layout_constraintTop_toTopOf="@+id/cbAgreeTerms" />
+
+
+        <com.asra.mobileapp.common.ETCheckBox
+            android:id="@+id/cbAgreeTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="@string/txt_signature_disclaimer"
+            app:layout_constraintBottom_toTopOf="@+id/btnUploadSelfie"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+
+            android:id="@+id/signature_pad"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/border"
+            app:clearOnDoubleClick="true"
+            app:layout_constraintBottom_toTopOf="@+id/btnCloseSignPad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:penColor="@android:color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="event_card_icon_description">event card icon</string>
+
+    <string name="dashboard_member_available_credits">Wallet</string>
+
+    <string name="dashboard_member_label_level">Member Status</string>
+    <string name="dashboard_member_expiry_label">Member Exp.</string>
+
+    <string name="ph_dashboard_member_available_credits_value"></string>
+    <string name="ph_dashboard_member_level_value"></string>
+    <string name="ph_dashboard_member_expiry_value"></string>
+
+
+    <string name="label_past_event">Past Events</string>
+    <string name="label_upcoming_event">Upcoming Events</string>
+    <string name="label_active">Active</string>
+    <string name="label_order_history">Order History</string>
+    <string name="label_credit_history">Credit History</string>
+
+    <string name="cd_past_event">Past Events</string>
+    <string name="cd_upcoming_event">Upcoming Events</string>
+
+
+    <string name="label_event_date">Event Date</string>
+    <string name="label_order_date">Order Date</string>
+    <string name="label_event_name">Event Name</string>
+    <string name="label_see_more">See More</string>
+
+
+    <string name="card_past_event">Past Event</string>
+    <string name="card_upcoming_event">Upcoming Event</string>
+
+    <string name="title_credit_history">Credit History</string>
+
+    <string name="address_first_name">First Name<sup>*</sup></string>
+    <string name="address_last_name">Last Name<sup>*</sup></string>
+    <string name="address_company_name">Company Name</string>
+    <string name="address_country">Country<sup>*</sup></string>
+    <string name="address_address">Address 1<sup>*</sup></string>
+    <string name="address_address2">Address2</string>
+    <string name="address_city">City<sup>*</sup></string>
+    <string name="address_state">State<sup>*</sup></string>
+    <string name="address_zip">Postal Code<sup>*</sup></string>
+    <string name="address_phone">Phone<sup>*</sup></string>
+    <string name="hint_address_phone_optional">Phone</string>
+    <string name="address_email">Email<sup>*</sup></string>
+    <string name="hint_address_email_optional">Email</string>
+    <string name="label_btn_save">Save</string>
+    <string name="label_btn_next">Next</string>
+    <string name="label_btn_register">Register</string>
+    <string name="label_btn_sign">Sign</string>
+
+
+    <string name="error_billing_first_name">Please provide first name</string>
+    <string name="error_billing_last_name">Please provide last name</string>
+    <string name="error_billing_country">Please select your country</string>
+    <string name="error_billing_address1">Please provide your address</string>
+    <string name="error_billing_city">Please provide your city</string>
+    <string name="error_billing_state">Please provide your state</string>
+    <string name="error_license_state">Please select license issued state</string>
+    <string name="error_billing_zip">Please provide your postal code</string>
+    <string name="error_billing_phone">Please provide a valid phone number</string>
+    <string name="error_billing_email">Please provide a valid email</string>
+
+    <string name="error_first_name_empty">Please provide first name</string>
+    <string name="error_emergency_first_name_empty">Please provide first name</string>
+    <string name="error_emergency_last_name_empty">Please provide last name</string>
+    <string name="error_last_name_empty">Please provide last name</string>
+    <string name="error_invalid_phone">Please provide a valid phone number</string>
+    <string name="error_invalid_emergency_phone">Please provide a valid phone number</string>
+    <string name="error_invalid_email">Please provide a valid email</string>
+    <string name="error_invalid_amount">Please provide a valid amount</string>
+    <string name="error_invalid_dob">Please select date of birth</string>
+    <string name="error_invalid_motorcycle">Please provide a valid motorcycle name</string>
+    <string name="error_invalid_motorcycle_number">Please provide a valid motorcycle number</string>
+    <string name="error_invalid_emergency_relation">Please select the relationship</string>
+    <string name="error_skill_level_empty">Please select your skill level</string>
+    <string name="error_invalid_password">Please provide a valid password</string>
+    <string name="error_invalid_name_n_location">Please provide a valid name and location</string>
+    <string name="error_password_mismatch">Password mismatch</string>
+    <string name="error_empty_license_number">Please provide your license number</string>
+
+    <string name="error_invalid_race_no">Please provide a valid race number</string>
+    <string name="error_invalid_ama_no">Please provide a valid AMA number</string>
+    <string name="error_invalid_asra_no">Please provide a valid ASRA number</string>
+    <string name="error_invalid_ccs_no">Please provide a valid CCS number</string>
+    <string name="error_invalid_nationality">Please provide your nationality</string>
+    <string name="error_invalid_teammates">Please provide at least one team mate</string>
+    <string name="error_invalid_sponsors">Please provide at least one sponsor</string>
+    <string name="error_invalid_ama_expiry">Please select your AMA expiry date</string>
+
+    <string name="sign_event_label">Event - #ID:</string>
+    <string name="sign_event_user">User - #ID:</string>
+    <string name="sign_event_membership">Membership:</string>
+    <string name="admin_event">Event:</string>
+    <string name="admin_event_date">Event Date:</string>
+    <string name="label_user_skill_level">Skill Level:</string>
+    <string name="label_user_id">User ID:</string>
+    <string name="label_user_dob">DOB:</string>
+    <string name="label_user_order">Order:</string>
+    <string name="label_user_email">Email:</string>
+
+
+    <string name="txt_signature_disclaimer">I accept the terms of this agreement</string>
+    <string name="title_dialog_signature">Draw signature here</string>
+    <string name="title_signature_disclaimer">Disclaimer</string>
+    <string name="btn_label_clear">Clear</string>
+    <string name="btn_label_save">Save</string>
+    <string name="btn_label_close">Close</string>
+    <string name="btn_label_redraw">Redraw</string>
+    <string name="txt_subscribe_discount">Send me exclusive discount.(You can unsubscribe anytime.)</string>
+
+    <string name="txt_agree_terms">I agree </string>
+    <string name="txt_terms_n_conditions">the terms and conditions </string>
+
+    <string name="stamp_passport">Stamp Passport</string>
+
+
+
+</resources>

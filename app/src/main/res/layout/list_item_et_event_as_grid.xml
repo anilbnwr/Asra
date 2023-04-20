@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/card_view_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/event_item_progressbarContainer"
+            android:layout_width="@dimen/et_list_image_width"
+            android:layout_height="@dimen/et_list_image_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/event_item_progressbar"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+
+                />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/event_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:contentDescription="@string/cd_cell_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/temp_event_image" />
+
+        <ImageView
+            android:id="@+id/event_cancel_status"
+            android:layout_width="@dimen/cancel_banner_size"
+            android:layout_height="@dimen/cancel_banner_size"
+            android:contentDescription="@string/cd_event_cancel_status"
+            android:src="@drawable/banner_cancelled"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event_item_image" />
+
+        <ImageView
+            android:id="@+id/event_item_btn_add_to_cart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:clickable="false"
+            android:visibility="gone"
+            android:contentDescription="@string/cd_button_to_add_event_to_cart"
+            android:focusable="false"
+            android:src="@drawable/ic_drawer_cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/event_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/event_item_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_item_image"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Event Name" />
+
+        <TextView
+            android:id="@+id/event_item_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_item_name"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="@color/color_cart_description"
+            android:textSize="@dimen/font_medium"
+            app:layout_constraintBottom_toTopOf="@+id/event_item_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_item_name"
+            tools:text="11 Sep 2020" />
+
+        <TextView
+            android:id="@+id/event_item_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_item_date"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_x_large"
+            android:background="@color/colorEventHostBgGray"
+            android:padding="@dimen/padding_small"
+            android:textColor="@color/colorEventHostText"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/event_item_price"
+            app:layout_constraintEnd_toStartOf="@+id/event_item_btn_add_to_cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_item_date"
+            tools:text="@string/ph_tracks_item_host" />
+
+        <TextView
+            android:id="@+id/event_item_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_item_type"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_xx_large"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_item_type"
+            app:layout_constraintBottom_toTopOf="@+id/eventHostsList"
+            tools:text="$132" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventHostsList"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/event_moto_icon_size"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_item_price"
+            app:layout_constraintBottom_toTopOf="@+id/event_external_host"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/event_external_host"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:textColor="@color/color_cart_description"
+            android:textSize="@dimen/font_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/event_item_btn_add_to_cart"
+            app:layout_constraintTop_toBottomOf="@+id/eventHostsList"
+            android:visibility="visible"
+            tools:text="When you click on add to cart, it'll redirect you to MDT's website." />
+        <View
+            android:id="@+id/event_item_info_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/event_item_btn_add_to_cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/btnAddToCart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

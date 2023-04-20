@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="By Skill Level"
+        android:id="@+id/menu_skill_level" />
+
+    <item android:title="By Training"
+        android:id="@+id/menu_filter_training" />
+
+    <item android:title="By Rental"
+        android:id="@+id/menu_filter_rental" />
+
+    <item android:title="By Classes"
+        android:id="@+id/menu_filter_classes" />
+
+    <item android:title="By Not Signed In"
+        android:id="@+id/menu_filter_not_signed_users" />
+    <item android:title="By Racers"
+        android:id="@+id/menu_filter_racers" />
+    <item android:title="By Duties"
+        android:id="@+id/menu_filter_duties" />
+
+    <item android:title="Clear"
+        android:id="@+id/menu_filter_clear" />
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_small">11sp</dimen>
+    <dimen name="font_medium">13sp</dimen>
+    <dimen name="font_large">15sp</dimen>
+    <dimen name="font_xlarge">18sp</dimen>
+
+    <dimen name="font_title">@dimen/font_large</dimen>
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
+        tools:context=".ui.dashboard.DashboardActivity"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_navigation"
+                android:layout_below="@id/toolbar"
+
+                android:text="@string/tab_home" />
+
+            <FrameLayout
+                android:id="@+id/emptyViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_navigation"
+                android:layout_below="@id/toolbar"
+                android:background="@color/colorLightGray"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/emptyMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dashboard_margin_start"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_large" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/progressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_navigation"
+                android:layout_below="@id/toolbar"
+                android:background="@color/colorBackgroundGrayTransparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="50dp"
+                    android:minHeight="50dp"
+                    />
+
+                <TextView
+                    android:id="@+id/progressMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:background="@color/colorPrimaryTransparent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/infoMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_large" />
+
+                <TextView
+                    android:id="@+id/infoMessageDismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/infoMessage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:text="@string/label_dismiss"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_medium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appUpdateInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar"
+                android:background="@color/colorAppUpgradeBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <include
+                    layout="@layout/app_update_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/app_update_margin"
+                    android:layout_marginEnd="@dimen/margin_normal" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:titleTextColor="@android:color/white" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorTabBackground"
+                app:itemIconTint="@color/colorNavIcon"
+                app:itemTextColor="@color/colorNavText"
+                app:layout_anchorGravity="bottom"
+                app:menu="@menu/menu_bottom_nav" />
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="90dp"
+            android:fitsSystemWindows="true"
+            android:visibility="visible"
+            app:menu="@menu/menu_drawer_navigation" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

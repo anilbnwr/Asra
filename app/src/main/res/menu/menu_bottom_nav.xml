@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_bottom_nav_home"
+        android:title="@string/tab_home" />
+    </group>
+    <group>
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/ic_bottom_nav_events"
+        android:title="@string/tab_events" />
+    </group>
+    <group>
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/ic_bottom_nav_shop"
+        android:title="@string/tab_shop"
+        android:visible="false"/>
+    </group>
+    <group>
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_bottom_nav_cart"
+        android:title="@string/tab_cart"
+        android:visible="false"/>
+    </group>
+</menu>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/userInfoMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_large"
+                android:visibility="visible"
+                tools:text="Transferring AMount" />
+
+            <TextView
+                android:id="@+id/available_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userInfoMessage"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_large"
+                android:visibility="visible"
+                tools:text="Available Credit : $100.00" />
+
+            <TextView
+                android:id="@+id/btnTransfer"
+
+                style="@style/primaryButton"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/margin_huge"
+                android:text="@string/btn_transfer_credit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_email"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:hint="@string/amount_to_transfer">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/receiver_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/available_balance"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:hint="@string/shop_hint_receiver_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/margin_xx_large"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/success_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:contentDescription="@string/login_logo_content_description"
+                android:src="@drawable/ic_common_action_success" />
+
+            <TextView
+                android:id="@+id/userInfoMessageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/success_logo"
+                android:layout_marginTop="@dimen/margin_xxx_large"
+                android:layout_marginBottom="@dimen/margin_x_large"
+                android:gravity="center_horizontal"
+                android:text="@string/msg_transaction_was_successful"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/font_huge"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/closeApp"
+
+                style="@style/primaryButton"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/margin_huge"
+                android:text="@string/label_close_app" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

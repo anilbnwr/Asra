@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/stylePageMarginWithTop">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.asra.mobileapp.common.CheckoutIndicator
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:checkoutFontSize="@dimen/font_medium"
+                app:checkoutStatus="2"
+                app:checkoutStrokeWidth="@dimen/checkoutIndicatorLineStroke" />
+
+
+            <RelativeLayout
+                android:id="@+id/traction_ack_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLayout"
+                android:layout_marginTop="55dp">
+
+                <TextView
+                    android:id="@+id/tv_checkout_thank_you"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/checkout_msg_thank_you"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <TextView
+                    android:id="@+id/tv_checkout_transaction_ack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_checkout_thank_you"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_medium" />
+
+                <com.asra.mobileapp.common.Divider
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_thick"
+                    android:layout_below="@+id/tv_checkout_transaction_ack"
+                    android:layout_marginTop="@dimen/margin_top_regular"
+                    android:background="@drawable/item_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transaction_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/traction_ack_layout"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_traction_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_label_date"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <TextView
+                    android:id="@+id/tv_traction_date_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tv_traction_date_label"
+                    android:text="31-12-2019"
+                    android:layout_alignStart="@+id/tv_traction_date_label"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_medium" />
+                <TextView
+                    android:id="@+id/tv_traction_number_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_label_order"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <TextView
+                    android:id="@+id/tv_traction_number_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_traction_date_label"
+                    android:text="#1272433"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_medium" />
+
+
+                <com.asra.mobileapp.common.Divider
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_thick"
+                    android:layout_below="@+id/tv_traction_date_value"
+                    android:layout_marginTop="@dimen/checkout_view_divider_margin_top"
+                    android:background="@drawable/item_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transaction_user_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_date_layout"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_traction_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ph_user_name"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <TextView
+                    android:id="@+id/tv_traction_user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_traction_username"
+                    android:text="@string/ph_user_email"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_medium" />
+
+                <com.asra.mobileapp.common.Divider
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_thick"
+                    android:layout_below="@+id/tv_traction_user_email"
+                    android:layout_marginTop="@dimen/checkout_view_divider_margin_top"
+                    android:background="@drawable/item_divider" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/transaction_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_user_layout"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/tv_traction_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_amount"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_xlarge" />
+                <TextView
+                    android:id="@+id/tv_traction_amount_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_traction_amount"
+                    tools:text="$999.00"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_large" />
+
+                <TextView
+                    android:id="@+id/tv_traction_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tv_traction_amount"
+                    android:text="@string/checkout_status_completed"
+                    android:layout_marginEnd="@dimen/dashboard_margin_end"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/font_medium" />
+
+                <com.asra.mobileapp.common.Divider
+                    android:layout_marginTop="@dimen/checkout_view_divider_margin_top"
+                    android:layout_below="@+id/tv_traction_amount_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_thick"
+                    android:background="@drawable/item_divider"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/payment_method_img"
+                android:layout_marginTop="@dimen/margin_top_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_info_layout"
+                android:src="@drawable/ic_temp_paypal_ack"/>
+
+            <Button
+                android:id="@+id/continueShopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/continue_shopping"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/payment_method_img"
+                android:visibility="gone"
+                style="@style/primaryButton"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+</layout>
+

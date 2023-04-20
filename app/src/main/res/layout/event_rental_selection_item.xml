@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rental_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackgroundWhite"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/event_rental_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dashboard_margin_end"
+            android:gravity="end"
+            android:text="@string/ph_price"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_medium" />
+
+        <com.asra.mobileapp.common.ETCheckBox
+            android:id="@+id/event_rental_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/event_rental_price"
+            android:text="@string/events_label_product_info"
+            android:textSize="@dimen/font_medium" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/size_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:animateLayoutChanges="true"
+        android:layout_below="@+id/header_layout">
+        <TextView
+            android:id="@+id/event_rental_label_select_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="30dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/label_select_size"
+            android:textSize="@dimen/font_medium" />
+        <com.asra.mobileapp.common.ETFlexRadioLayout
+            android:id="@+id/event_felx_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp">
+
+
+        </com.asra.mobileapp.common.ETFlexRadioLayout>
+    </LinearLayout>
+
+    <com.asra.mobileapp.common.Divider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_below="@+id/size_list_layout"
+        android:background="@drawable/item_divider"/>
+
+</RelativeLayout>
